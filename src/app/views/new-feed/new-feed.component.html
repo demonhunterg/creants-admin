@@ -1,0 +1,18 @@
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-6">
+        <input #titleInput type="text" class="form-control" id="input01" placeholder="Tiêu đề">
+      </div>
+      <div class="col-md-2">
+        <select #selectedCategory _ngcontent-c5="" class="form-control" id="exampleSelect1" required>
+          <option _ngcontent-c5="" value="new-feed">Chọn Danh Mục</option>
+          <option _ngcontent-c5="" value="blog">- Blog</option>
+          <option _ngcontent-c5="" value="new-feed">- Tin tức</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary btn-raised btn-xm" type="button" (click)="postArticle(titleInput.value, contentInput.ckeditorContent,selectedCategory.value)">Đăng Bài</button>
+      </div>
+    </div>
+  </div>
+  <ckeditor-component #contentInput></ckeditor-component>

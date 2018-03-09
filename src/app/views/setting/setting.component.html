@@ -1,0 +1,28 @@
+<div class="form-group">
+  <div class="row">
+    <div class="col-md-1" style="padding-top: 12px; font-size: 15px;">
+      <span style="padding-top: 5px;">Chọn file</span>
+    </div>
+    <div class="col-md-3">
+      <select #selectedCategory class="form-control" id="exampleSelect1" required>
+        <option *ngFor="let fileName of fileList" value="{{fileName}}">{{fileName}}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-raised btn-xm" type="button" (click)="viewFile(selectedCategory.value)">
+        Xem
+      </button>
+      <button class="btn btn-primary btn-raised btn-xm" type="button" (click)="reloadFile(selectedCategory.value)">
+        Cập nhật
+      </button>
+
+    </div>
+  </div>
+</div>
+<div *ngIf="fileContent">
+  <div style="background-color: white; padding: 10px;">
+  <pre lang="xml">
+    <code>{{fileContent}}</code>
+  </pre>
+  </div>
+</div>

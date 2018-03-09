@@ -1,0 +1,17 @@
+.table th, .table td {
+  text-align: left;
+}
+
+#pagination li{
+  font-size: 40px;
+}
+
+#pagination li a{
+  font-size: 30px;
+  padding: 10px;
+}
+
+.pagination-container .pagination li.disabled a, .pagination-container .pagination li.disabled a:hover {
+  cursor: default;
+  opacity: .3
+}

@@ -1,0 +1,42 @@
+<div class="card bg-light text-dark" style="padding: 20px;overflow-x:auto;">
+  <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Tên Người Chơi</th>
+      <th scope="col">Cấp Độ</th>
+      <th scope="col">NPC</th>
+      <th scope="col">Thời Gian Login</th>
+      <th scope="col">Ngày Tạo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let gameHero of jsonData.gameHeroes">
+      <td>{{gameHero.id}}</td>
+      <td>{{gameHero.name}}</td>
+      <td>{{gameHero.level}}</td>
+      <td>{{gameHero.npc}}</td>
+      <td>{{gameHero.loginTime | date:'dd/MM/yyyy hh:mm a'}}</td>
+      <td>{{gameHero.createTime | date:'dd/MM/yyyy hh:mm a'}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div style="padding-top: 22px; margin: auto;">
+    <nav aria-label="Page navigation example" class="pagination-container">
+      <ul id="pagination" class="pagination">
+        <li class="first {{curPage == 1 ? 'disabled' : ''}}"><a [routerLink]="['/views/user-list/',{page:1}]">«</a></li>
+        <li class="prev {{curPage == 1 ? 'disabled' : ''}}"><a [routerLink]="['/views/user-list/',{page:curPage-1}]">‹</a></li>
+        <li class="page">
+          <a [routerLink]="['/views/user-list/',{page:curPage}]" >{{curPage}}/{{maxPage}}</a>
+        </li>
+
+        <li class="next {{curPage == maxPage ? 'disabled' : ''}}"><a [routerLink]="['/views/user-list/',{page:curPage+1}]">›</a></li>
+        <li class="last {{curPage == maxPage ? 'disabled' : ''}}"><a [routerLink]="['/views/user-list/',{page:maxPage}]">»</a></li>
+      </ul>
+    </nav>
+
+
+  </div>
+
+
+</div>

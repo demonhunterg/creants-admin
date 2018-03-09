@@ -1,0 +1,41 @@
+<form>
+  <div class="form-group">
+    <label for="input01">Tiêu đề</label>
+    <input #titleInput type="text" class="form-control" placeholder="">
+  </div>
+
+  <div class="form-group">
+    <label for="textarea01">Nội dung</label>
+    <textarea #contentInput placeholder="" class="form-control" id="textarea01"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="input01">Player Id</label>
+    <input #playerIdInput type="text" class="form-control" placeholder="323">
+  </div>
+  <div class="form-group">
+    <label for="input01">Quà</label>
+    <input #giftStringInput type="text" class="form-control" id="input01" placeholder="1001/2#1002/10">
+  </div>
+
+  <button class="btn btn-primary btn-raised btn-xm" type="button" (click)="sendMail(titleInput.value, contentInput.value,playerIdInput.value,giftStringInput.value)">Gửi</button>
+</form>
+
+<br><br>
+<p>format: id/số lượng#id/số lượng</p>
+<div>
+  <p>Bless: 11999</p>
+  <p>Soul: 11001</p>
+  <p>Chaos: 11002</p>
+  <p>Life: 11006</p>
+  <p>Creation: 11007</p>
+  <p>Zen: 11905</p>
+  <p>Stamina: 11910</p>
+</div>
+
+<br>
+<br>
+<div>
+  <p>Anh Sơn: 354</p>
+  <p>Anh Xíu: 363</p>
+</div>
